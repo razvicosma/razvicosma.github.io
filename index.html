@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio & CV</title>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accent-color: #0366d6;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        header p {
+            margin: 0;
+            color: #666;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .cv-section,
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skills-list li {
+            background: #eee;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Razvan Cosma</h1>
+        <p>Software Engineer | Open Source Contributor</p>
+        <p>
+            <a href="mailto:razvicosma@icloud.com">Email</a> |
+            <a href="https://github.com/razvicosma">GitHub</a> |
+            <a href="https://linkedin.com/in/razvicosma">LinkedIn</a>
+        </p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a computer science student passionate about building efficient systems and writing clean code. I
+                specialize in backend development and algorithms.</p>
+        </section>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+
+            <div class="cv-section">
+                <h3>Education</h3>
+                <p><strong>B.S. in Computer Science</strong> - Technical University of Cluj-Napoca</p>
+                <p><em>Expected Graduation: 2026</em></p>
+                <p>Relevant Coursework: Data Structures, Operating Systems, Computer Networks.</p>
+            </div>
+
+            <div class="cv-section">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Apartment-Booking-App">Project One</a></h3>
+                    <p>A booking organising app.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/OCT-3D-Drusen-Evolution-Tracking">Project Two</a></h3>
+                    <p>My bachelor thesis project.</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
