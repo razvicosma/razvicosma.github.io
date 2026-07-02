@@ -1,0 +1,314 @@
+/* Default (Light) Theme Variables */
+:root {
+    --bg-color: #f3f4f6;
+    --surface-color: #ffffff;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --tech-stack-bg: #eff6ff;
+    --date-bg: #f3f4f6;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg-color: #111827;
+    --surface-color: #1f2937;
+    --primary-color: #60a5fa;
+    --primary-hover: #93c5fd;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --tech-stack-bg: #374151;
+    --date-bg: #111827;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--surface-color) 0%, var(--bg-color) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+header p.subtitle {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.contact-links a:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+h2::after {
+    content: '';
+    flex: 1;
+    margin-left: 1rem;
+    height: 1px;
+    background-color: var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.cv-section {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cv-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.cv-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-item h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cv-item .date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    background: var(--date-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-item h4 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.cv-item ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.cv-item ul li {
+    margin-bottom: 0.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.project-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--tech-stack-bg);
+    color: var(--primary-color);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.edu-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 4px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+[data-theme="dark"] .edu-logo {
+    border-color: var(--border-color);
+}
+
+.edu-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.edu-content h3 {
+    width: 100%;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.exp-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 4px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+[data-theme="dark"] .exp-logo {
+    border-color: var(--border-color);
+}
+
+.exp-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.exp-content h3 {
+    width: 100%;
+}

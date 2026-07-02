@@ -4,153 +4,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio & CV</title>
-    <style>
-        :root {
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --accent-color: #0366d6;
-            --card-bg: #fff;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        header h1 {
-            margin: 0 0 0.5rem 0;
-        }
-
-        header p {
-            margin: 0;
-            color: #666;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-        }
-
-        .cv-section,
-        .project-card {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skills-list li {
-            background: #eee;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Răzvan-Claudiu Cosma - Portfolio & CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Razvan Cosma</h1>
-        <p>Software Engineer | Open Source Contributor</p>
-        <p>
-            <a href="mailto:razvicosma@icloud.com">Email</a> |
-            <a href="https://github.com/razvicosma">GitHub</a> |
-            <a href="https://linkedin.com/in/razvicosma">LinkedIn</a>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌓</button>
+        <h1>Răzvan-Claudiu Cosma</h1>
+        <p class="subtitle">Software Developer | Computer Science Student</p>
+        <p class="contact-links">
+            <a href="mailto:razvicosma@icloud.com">razvicosma@icloud.com</a>
+            <a href="https://github.com/razvicosma" target="_blank">GitHub</a>
         </p>
     </header>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a computer science student passionate about building efficient systems and writing clean code. I
-                specialize in backend development and algorithms.</p>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="cv-section">
+                <div class="cv-item experience-item">
+                    <img src="logos/ntt.png" alt="NTT DATA Logo" class="exp-logo">
+                    <div class="exp-content">
+                        <h3>NTT DATA Romania <span class="date">Dec. 2025 – Jun. 2026</span></h3>
+                        <h4>Software Developer</h4>
+                        <ul>
+                            <li>Built a REST API from scratch using Spring Boot, collaborating in an agile team and
+                                documenting endpoints with Swagger.</li>
+                            <li>Completed intensive, hands-on training across the stack, including frontend development,
+                                QA
+                                practices, and Mainframe systems.</li>
+                            <li>Mastered enterprise architecture patterns and legacy system workflows before
+                                transitioning
+                                into a specialized backend role.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-item experience-item">
+                    <img src="logos/bosch.png" alt="Bosch Logo" class="exp-logo">
+                    <div class="exp-content">
+                        <h3>Bosch Romania <span class="date">Aug. 2025 – Oct. 2025</span></h3>
+                        <h4>Software Developer</h4>
+                        <ul>
+                            <li>Wrote Python automation scripts to gather and centralize data from distributed stations,
+                                cutting processing time by 80%.</li>
+                            <li>Built a full-stack Flask app to migrate legacy spreadsheet data into a clean, queryable
+                                SQL
+                                database.</li>
+                            <li>Set up automated endpoint monitoring to track equipment health and catch issues before
+                                they
+                                caused system downtime.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="cv">
-            <h2>Curriculum Vitae</h2>
+        <section id="education">
+            <h2>Education</h2>
 
             <div class="cv-section">
-                <h3>Education</h3>
-                <p><strong>B.S. in Computer Science</strong> - Technical University of Cluj-Napoca</p>
-                <p><em>Expected Graduation: 2026</em></p>
-                <p>Relevant Coursework: Data Structures, Operating Systems, Computer Networks.</p>
-            </div>
+                <div class="cv-item education-item">
+                    <img src="logos/kuleuven.png" alt="KU Leuven Logo" class="edu-logo">
+                    <div class="edu-content">
+                        <h3>Katholieke Universiteit Leuven <span class="date">Upcoming 2026-2028</span></h3>
+                        <h4>Master of Engineering in Computer Science - Artificial Intelligence Track</h4>
+                    </div>
+                </div>
 
-            <div class="cv-section">
-                <h3>Technical Skills</h3>
-                <ul class="skills-list">
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>Git</li>
-                    <li>SQL</li>
-                </ul>
+                <div class="cv-item education-item">
+                    <img src="logos/utcn.png" alt="TUCN Logo" class="edu-logo">
+                    <div class="edu-content">
+                        <h3>Technical University of Cluj-Napoca <span class="date">Oct. 2022 – Present</span></h3>
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                    </div>
+                </div>
+
+                <div class="cv-item education-item">
+                    <img src="logos/porto.png" alt="University of Porto Logo" class="edu-logo">
+                    <div class="edu-content">
+                        <h3>University of Porto <span class="date">Feb. 2025 – Jul. 2025</span></h3>
+                        <h4>Erasmus Mobility - BSc in CS / BEng Informatics and Computing Engineering</h4>
+                    </div>
+                </div>
+
+                <div class="cv-item education-item">
+                    <img src="logos/hanyang.png" alt="Hanyang University Logo" class="edu-logo">
+                    <div class="edu-content">
+                        <h3>Hanyang University <span class="date">Jun. 2026 – Jul. 2026</span></h3>
+                        <h4>International Summer School in Global Innovation and Science</h4>
+                    </div>
+                </div>
+
+                <div class="cv-item education-item">
+                    <img src="logos/sofia.png" alt="TU Sofia Logo" class="edu-logo">
+                    <div class="edu-content">
+                        <h3>Technical University of Sofia <span class="date">Nov. 2025</span></h3>
+                        <h4>Blended Intensive Program in AI & Cybersecurity</h4>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>GitHub Projects</h2>
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/razvicosma/Apartment-Booking-App">Project One</a></h3>
-                    <p>A booking organising app.</p>
+                    <h3><a href="https://github.com/razvicosma/OCT-3D-Drusen-Evolution-Tracking" target="_blank">OCT 3D
+                            Drusen Tracking (Thesis)</a></h3>
+                    <p> Built a deep learning pipeline and integrated a reconstruction and a segmentation model with a
+                        multidimensional viewer to help track how retinal conditions like AMD progress over time.</p>
+                    <div class="tech-stack">Python</div>
                 </div>
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/razvicosma/OCT-3D-Drusen-Evolution-Tracking">Project Two</a></h3>
-                    <p>My bachelor thesis project.</p>
+                    <h3><a href="https://github.com/razvicosma/Energy-Management-System" target="_blank">Energy
+                            Management System</a></h3>
+                    <p>A microservices-based smart energy monitor. Handles real-time device data, sends alerts via
+                        WebSockets, and uses RabbitMQ for async communication.</p>
+                    <div class="tech-stack">Python / FastAPI</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/ICU-Length-of-Stay-Prediction" target="_blank">ICU Stay
+                            Predictor</a></h3>
+                    <p>An ML pipeline that predicts hospital ICU stay lengths for tachycardia patients using the
+                        MIMIC-III dataset. Built with XGBoost and LIME to explain the model's reasoning.</p>
+                    <div class="tech-stack">Jupyter Notebook</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Ride-Sharing-App" target="_blank">Ride Sharing App</a>
+                    </h3>
+                    <p>A full-stack ride-sharing platform. I wrote custom spatial indexing and matching algorithms
+                        (fully unit-tested with JUnit) to efficiently pair drivers with passengers.</p>
+                    <div class="tech-stack">Java / Spring Boot</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Tropical-GrandPrix-Simulation" target="_blank">Tropical
+                            GrandPrix</a></h3>
+                    <p>An interactive 3D racing simulation featuring dynamic lighting, rain, fog, day-night cycles, and
+                        a user-controlled camera.</p>
+                    <div class="tech-stack">C++ / OpenGL / Blender</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Polynomial-calculator" target="_blank">Polynomial
+                            Calculator</a></h3>
+                    <p>A desktop app for doing math on polynomials (derivatives, integrals, etc.). Wrapped in a clean
+                        GUI and backed by automated tests.</p>
+                    <div class="tech-stack">Java / JavaFX / JUnit</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Apartment-booking-app" target="_blank">Apartment Booking
+                            App</a></h3>
+                    <p>A desktop booking platform with user accounts, search filters, reservation handling, and an admin
+                        dashboard.</p>
+                    <div class="tech-stack">Java / JavaFX / PostgreSQL</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Multimedia-Extension-Unit" target="_blank">Multimedia
+                            Extension Unit</a></h3>
+                    <p>Hardware design of an MMX mapped to an FPGA board, allowing for fast SIMD instruction execution
+                        for multimedia tasks.</p>
+                    <div class="tech-stack">VHDL</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Single-Cycle-16-Bit-MIPS" target="_blank">16-Bit MIPS
+                            Processor</a></h3>
+                    <p>A ground-up hardware implementation of a single-cycle 16-bit MIPS architecture.</p>
+                    <div class="tech-stack">VHDL</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Pocket-Calculator" target="_blank">Pocket Calculator</a>
+                    </h3>
+                    <p>A fully functional pocket calculator built entirely at the hardware logic level.</p>
+                    <div class="tech-stack">VHDL</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Radar-Detector" target="_blank">Radar Detector</a></h3>
+                    <p>An embedded software project that interfaces with hardware to detect radar signals.</p>
+                    <div class="tech-stack">C++</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Line-Follower-Robot" target="_blank">Line Follower
+                            Robot</a></h3>
+                    <p>Programmed the embedded logic for an autonomous robot that tracks and follows paths using sensor
+                        data.</p>
+                    <div class="tech-stack">C++</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Public-Transit-App" target="_blank">Public Transit
+                            App</a></h3>
+                    <p>A cross-platform mobile app that helps users check transit schedules and map out routes.</p>
+                    <div class="tech-stack">Dart / Flutter</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Queue-Management-System" target="_blank">Queue Management
+                            System</a></h3>
+                    <p>A multi-threaded Java application built to simulate and optimize real-time customer queues.</p>
+                    <div class="tech-stack">Java</div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/razvicosma/Order-Management-System" target="_blank">Order Management
+                            System</a></h3>
+                    <p>A software tool to track, update, and process customer orders through their lifecycle.</p>
+                    <div class="tech-stack">HTML / Java</div>
                 </div>
 
             </div>
         </section>
+
+        <section id="awards">
+            <h2>Awards & Competitions</h2>
+            <div class="cv-section">
+                <ul>
+                    <li style="margin-bottom: 0.5rem;"><strong>Best Project Award (Nov. 2025):</strong> Built a winning
+                        spam detection model as part of a multicultural team at the TU Sofia AI & Cyber program.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Innovation Labs (Mar. 2024):</strong> Qualified for a
+                        national start-up accelerator out of a nationwide hackathon. Handled mockups and financial
+                        analysis.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>JunctionX Budapest (Nov. 2023):</strong> Competed in an
+                        international 48-hour hackathon.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Cloudflight Coding Contest:</strong> Competed in the 38th
+                        and 39th editions of this algorithmic programming contest.</li>
+                    <li><strong>First Tech Challenge (2018 & 2019):</strong> Reached the national stage in high school
+                        competitive robotics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="volunteering">
+            <h2>Volunteering</h2>
+            <div class="cv-section">
+                <ul>
+                    <li style="margin-bottom: 0.5rem;"><strong>Erasmus Student Network:</strong> Volunteer for ESN
+                        Cluj-Napoca (Sep. 2025 – Present).</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>NASA Space Apps:</strong> Organized and volunteered at
+                        the local Cluj-Napoca challenge (Oct. 2025).</li>
+                    <li><strong>EUT+ Week:</strong> Event volunteer at TUCN (Oct. 2025).</li>
+                </ul>
+            </div>
+        </section>
+
     </div>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            root.setAttribute('data-theme', 'dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                root.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
 
 </html>
